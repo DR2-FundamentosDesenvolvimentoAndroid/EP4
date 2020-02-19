@@ -16,13 +16,16 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(
                 this,
                 "Dados enviados\n" +
-                        "Nome: ${editTxtNome.text.toString()}\n" +
-                        "E-Mail: ${editTxtEmail.text.toString()}\n" +
-                        "Telefone: ${editTxtTelefone.text.toString()}",
+                        "Nome: ${editTxtNome.text}\n" +
+                        "E-Mail: ${editTxtEmail.text}\n" +
+                        "Telefone: ${editTxtTelefone.text}",
                 Toast.LENGTH_SHORT
             ).show()
 
             var intt = Intent(this, DadosActivity::class.java)
+            intt.putExtra("nomeDoUsuario", editTxtNome.text.toString())
+            intt.putExtra("emailDoUsuario", editTxtEmail.text.toString())
+            intt.putExtra("telefoneDoUsuario", editTxtTelefone.text.toString())
             startActivity(intt)
 
 

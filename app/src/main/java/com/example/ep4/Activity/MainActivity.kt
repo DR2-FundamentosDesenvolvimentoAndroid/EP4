@@ -1,9 +1,11 @@
-package com.example.ep4
+package com.example.ep4.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.ep4.Model.Usuario
+import com.example.ep4.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +25,9 @@ class MainActivity : AppCompatActivity() {
             ).show()
 
             var intt = Intent(this, DadosActivity::class.java)
-            intt.putExtra("nomeDoUsuario", editTxtNome.text.toString())
-            intt.putExtra("emailDoUsuario", editTxtEmail.text.toString())
-            intt.putExtra("telefoneDoUsuario", editTxtTelefone.text.toString())
+            var usuario = Usuario(editTxtNome.text.toString(),editTxtEmail.text.toString(),editTxtTelefone.text.toString())
+
+            intt.putExtra("usuario", usuario)
             startActivity(intt)
 
 

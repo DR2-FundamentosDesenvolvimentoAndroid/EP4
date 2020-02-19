@@ -19,7 +19,7 @@ class DadosActivity : AppCompatActivity() {
         usuario
 
         tvNome.text = if(usuario.nome.isEmpty()) "Nome do Usuario" else usuario.nome
-        tvEmail.text = if(usuario.email.isEmpty()) "E-mail do Usuario" else usuario.nome
-        tvTelefone.text = if(usuario.telefone.isEmpty()) "Telefone do Usuario" else usuario.nome
+        tvEmail.text = if(usuario.email.isEmpty()) "E-mail do Usuario" else usuario.email
+        tvTelefone.text = if(usuario.telefone.isEmpty()) "Telefone do Usuario" else usuario.telefone
     }
 }

@@ -15,9 +15,6 @@ class DadosActivity : AppCompatActivity() {
 
         var usuario = intent.getSerializableExtra("usuario") as Usuario
 
-
-        usuario
-
         tvNome.text = if(usuario.nome.isEmpty()) "Nome do Usuario" else usuario.nome
         tvEmail.text = if(usuario.email.isEmpty()) "E-mail do Usuario" else usuario.email
         tvTelefone.text = if(usuario.telefone.isEmpty()) "Telefone do Usuario" else usuario.telefone

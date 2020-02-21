@@ -26,6 +26,11 @@ class DadosActivity : AppCompatActivity() {
         intentResult.putExtra("resultado", "cadastrado com Sucesso!")
 
         setResult(Activity.RESULT_OK, intentResult)
-        finish()
+
+
+        btnVoltar.setOnClickListener{
+            finish()
+        }
+//        finish()
     }
 }

@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
             var usuario = Usuario(editTxtNome.text.toString(),editTxtEmail.text.toString(),editTxtTelefone.text.toString())
 
             intt.putExtra("usuario", usuario)
-            startActivity(intt)
+//            startActivity(intt)
 
-
+            startActivityForResult(intt, 1)
 
         }
     }
